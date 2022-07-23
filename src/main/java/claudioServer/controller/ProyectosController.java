@@ -36,8 +36,15 @@ public class ProyectosController {
         pros.setProNombre(pro.getProNombre());
         pros.setProFecha(pro.getProFecha());
         pros.setProLink(pro.getProLink());
-        pros.setProImg(pro.getProImg());
         pros.setProDescripcion(pro.getProDescripcion());
+        ProyectosService.save(pros);
+        return null;
+    }
+
+    @PutMapping("/modImgProyectos/{id}")
+    public List<Proyectos>modImgProyectos(@PathVariable Long id , @RequestBody @Valid Proyectos pro){
+        Proyectos pros= ProyectosService.buscarProyectos(id);
+        pros.setProImg(pro.getProImg());
         ProyectosService.save(pros);
         return null;
     }

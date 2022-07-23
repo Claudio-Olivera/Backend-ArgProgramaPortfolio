@@ -33,6 +33,8 @@ public class Proyectos {
         this.proLink = proLink;
         this.proImg = proImg;
         this.proDescripcion = proDescripcion;
-
     }
+
+
+
 }

@@ -33,13 +33,10 @@ public class HardController {
     @PutMapping("/modHard/{id}")
     public List<Hard>modSkills(@PathVariable Long id , @RequestBody @Valid Hard skl){
         Hard skill= HardService.buscarHard(id);
-        skill.setPrimercirculo(skl.getPrimercirculo());
-        skill.setSegundocirculo(skl.getSegundocirculo());
-        skill.setTercercirculo(skl.getTercercirculo());
-        skill.setCuartocirculo(skl.getCuartocirculo());
-        skill.setQuintocirculo(skl.getQuintocirculo());
-        skill.setSextocirculo(skl.getSextocirculo());
-
+        skill.setCirculo(skl.getCirculo());
+        skill.setIcono(skl.getIcono());
+        skill.setNombre(skl.getNombre());
+        skill.setColor(skl.getColor());
         HardService.save(skill);
 
         return null;

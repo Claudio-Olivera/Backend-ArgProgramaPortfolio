@@ -38,6 +38,8 @@ public class AcercaController {
         acer.setSobremi(ace.getSobremi());
         acer.setEmail(ace.getEmail());
         acer.setFechaNacimiento(ace.getFechaNacimiento());
+        acer.setTelefono(ace.getTelefono());
+        acer.setUrlCV(ace.getUrlCV());
         acercaService.save(acer);
         return null;
         }

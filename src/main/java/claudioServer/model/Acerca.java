@@ -1,27 +1,34 @@
 package claudioServer.model;
+import lombok.NoArgsConstructor;
+
 import javax.persistence.*;
 
 @Entity
-public class Acerca{
+@NoArgsConstructor
+public class Acerca {
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String nombres;
     private String apellidos;
     private String ocupacion;
-    @Column (length = 1000)
+    @Column(length = 1000)
     private String sobremi;
     private String email;
     private String fechaNacimiento;
+    private String urlCV;
+    private String telefono;
     @Lob
     private String imgPerfil;
     @Lob
     private String imgRepresentativa;
 
-    public Acerca() {
+    public Acerca(String urlCV) {
+        this.urlCV = urlCV;
     }
 
-    public Acerca(Long id, String nombres, String apellidos, String ocupacion, String sobremi, String email, String fechaNacimiento, String imgPerfil, String imgRepresentativa) {
+    public Acerca(Long id, String nombres, String apellidos, String ocupacion, String sobremi, String email, String fechaNacimiento, String urlCV, String telefono, String imgPerfil, String imgRepresentativa) {
         this.id = id;
         this.nombres = nombres;
         this.apellidos = apellidos;
@@ -29,6 +36,8 @@ public class Acerca{
         this.sobremi = sobremi;
         this.email = email;
         this.fechaNacimiento = fechaNacimiento;
+        this.urlCV = urlCV;
+        this.telefono = telefono;
         this.imgPerfil = imgPerfil;
         this.imgRepresentativa = imgRepresentativa;
     }
@@ -87,6 +96,22 @@ public class Acerca{
 
     public void setFechaNacimiento(String fechaNacimiento) {
         this.fechaNacimiento = fechaNacimiento;
+    }
+
+    public String getUrlCV() {
+        return urlCV;
+    }
+
+    public void setUrlCV(String urlCV) {
+        this.urlCV = urlCV;
+    }
+
+    public String getTelefono() {
+        return telefono;
+    }
+
+    public void setTelefono(String telefono) {
+        this.telefono = telefono;
     }
 
     public String getImgPerfil() {

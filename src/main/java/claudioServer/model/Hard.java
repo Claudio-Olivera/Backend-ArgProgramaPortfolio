@@ -10,25 +10,19 @@ public class Hard {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-
-    private int primercirculo;
-    private int segundocirculo;
-    private int tercercirculo;
-    private int cuartocirculo;
-    private int quintocirculo;
-    private int sextocirculo;
-
+    private int circulo;
+    private String icono;
+    private String nombre;
+    private String color;
 
     public Hard() {
     }
 
-    public Hard(Long id, int primercirculo, int segundocirculo, int tercercirculo, int cuartocirculo, int quintocirculo, int sextocirculo) {
+    public Hard(Long id, int circulo, String icono, String nombre , String color) {
         this.id = id;
-        this.primercirculo = primercirculo;
-        this.segundocirculo = segundocirculo;
-        this.tercercirculo = tercercirculo;
-        this.cuartocirculo = cuartocirculo;
-        this.quintocirculo = quintocirculo;
-        this.sextocirculo = sextocirculo;
+        this.circulo = circulo;
+        this.icono = icono;
+        this.nombre = nombre;
+        this.color = color;
     }
 }
