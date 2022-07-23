@@ -1,4 +1,4 @@
-/* package claudioServer.util;
+package claudioServer.util;
 import claudioServer.enums.RolNombre;
 import claudioServer.model.Rol;
 import claudioServer.service.RolService;
@@ -23,4 +23,4 @@ public class util implements CommandLineRunner {
         rolService.save(rolAdmin);
         rolService.save(rolUser);
     }
-} */
+}
